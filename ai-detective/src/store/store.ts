@@ -1,3 +1,5 @@
+
+
 import { configureStore } from '@reduxjs/toolkit';
 import scoreReducer from './slices/scoreSlice';
 

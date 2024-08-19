@@ -1,0 +1,18 @@
+
+
+{
+    "responses": [
+        {
+            "input": "What is AI?",
+            "output": "AI stands for Artificial Intelligence. It's a branch of computer science dealing with the simulation of intelligent behavior in computers."
+        },
+        {
+            "input": "How do you detect AI-generated text?",
+            "output": "Detecting AI-generated text can involve analyzing patterns, inconsistencies, and other markers that might indicate the text wasn't written by a human."
+        },
+        {
+            "input": "Hello",
+            "output": "Hi there! How can I assist you today?"
+        }
+    ]
+}
