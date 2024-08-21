@@ -17,20 +17,27 @@ const Chatbot: React.FC = () => {
     };
 
     return (
-        <div>
-            <h2>Ask the AI Detective</h2>
+        <div className="p-4 bg-white shadow-md rounded-md text-center">
+            <h2 className="text-lg font-semibold mb-4 text-black">Ask the AI Detective</h2>
             <textarea
                 value={userMessage}
                 onChange={(e) => setUserMessage(e.target.value)}
                 placeholder="Type your message here..."
+                className="w-full p-2 border rounded-md mb-4 text-black"
             />
-            <button onClick={sendMessage}>Send</button>
-            <div>
-                <h3>AI Detective Response:</h3>
-                <p>{botResponse}</p>
+            <button
+                onClick={sendMessage}
+                className="px-4 py-2 bg-blue-500 text-black rounded-md hover:bg-blue-600"
+            >
+                Send
+            </button>
+            <div className="mt-4">
+                <h3 className="text-lg font-medium text-black">AI Detective Response:</h3>
+                <p className="text-black">{botResponse}</p>
             </div>
         </div>
     );
+    
 };
 
 export default Chatbot;

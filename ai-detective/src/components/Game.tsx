@@ -40,17 +40,34 @@ const Game: React.FC = () => {
             setFeedback('Incorrect! This text was ' + correctSource + '.');
         }
     };
-
     return (
-        <div>
-            <h2>Is this text AI-generated or real?</h2>
-            <p>{currentText}</p>
-            <button onClick={() => handleUserChoice('ai')}>AI</button>
-            <button onClick={() => handleUserChoice('real')}>Real</button>
-            {userChoice && <p>{feedback}</p>}
-            <button onClick={fetchRandomText}>Try Another Text</button>
+        <div className="p-4 bg-white shadow-md rounded-md text-center">
+            <h2 className="text-lg font-semibold mb-2 text-black">Is this text AI-generated or real?</h2>
+            <p className="mb-4 text-black">{currentText}</p>
+            <div className="space-y-2">
+                <button
+                    onClick={() => handleUserChoice('ai')}
+                    className="w-full px-4 py-2 bg-green-500 text-black rounded-md hover:bg-green-600"
+                >
+                    AI
+                </button>
+                <button
+                    onClick={() => handleUserChoice('real')}
+                    className="w-full px-4 py-2 bg-yellow-500 text-black rounded-md hover:bg-yellow-600"
+                >
+                    Real
+                </button>
+            </div>
+            {userChoice && <p className="mt-4 text-black">{feedback}</p>}
+            <button
+                onClick={fetchRandomText}
+                className="mt-4 px-4 py-2 bg-blue-500 text-black rounded-md hover:bg-blue-600"
+            >
+                Try Another Text
+            </button>
         </div>
     );
+    
 };
 
 export default Game;
